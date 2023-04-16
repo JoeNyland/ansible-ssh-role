@@ -1,0 +1,13 @@
+---
+- name: Prepare
+  hosts: all
+  tasks:
+    - name: Install SSH
+      apt:
+        name: ssh
+        update_cache: true
+    - name: Start and enable SSH
+      service:
+        name: ssh
+        state: started
+        enabled: true

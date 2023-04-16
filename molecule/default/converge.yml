@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include joenyland.ssh"
+      include_role:
+        name: "joenyland.ssh"

@@ -3,6 +3,11 @@
   tags: ssh
   become: true
   block:
+    - name: Install
+      apt:
+        name: ssh
+        update_cache: true
+
     - name: Disable password-based login via SSH
       lineinfile:
         path: /etc/ssh/sshd_config
